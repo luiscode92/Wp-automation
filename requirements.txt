@@ -1,0 +1,5 @@
+python==3.10.*
+streamlit
+pandas
+selenium
+webdriver_manager
