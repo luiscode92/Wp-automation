@@ -13,7 +13,7 @@ import urllib.parse
 def send_whatsapp_message(df, msj):
 
     # Initialize Chrome driver
-    chromedriver_path = "/usr/local/bin/chromedriver"
+    chromedriver_path = "./chromedriver"
     driver = webdriver.Chrome(chromedriver_path)
 
     # List of WhatsApp numbers to send messages to
