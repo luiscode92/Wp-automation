@@ -1,4 +1,4 @@
-pandas
 streamlit
-selenium
-webdriver-manager
+pandas
+selenium==4.0.0
+webdriver_manager

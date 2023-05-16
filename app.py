@@ -1,9 +1,9 @@
-import csv
 import pandas as pd
 import time
 import streamlit as st
 from selenium import webdriver
 from webdriver_manager.chrome import ChromeDriverManager
+from selenium.webdriver.chrome.service import Service as ChromeService
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
@@ -13,8 +13,7 @@ import urllib.parse
 def send_whatsapp_message(df, msj):
 
     # Initialize Chrome driver
-    chromedriver_path = "./chromedriver"
-    driver = webdriver.Chrome(chromedriver_path)
+    driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()))
 
     # List of WhatsApp numbers to send messages to
     #numbers = ['+573226130241', '+573156702559', '+573104983987']
