@@ -13,9 +13,9 @@ import urllib.parse
 def send_whatsapp_message(df, msj):
 
     # Initialize Chrome driver
-    chrome_options = webdriver.ChromeOptions()
-    chrome_options.add_argument("--no-sandbox")
-    driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()), options=chrome_options)
+    service = ChromeService(executable_path=ChromeDriverManager().install())
+
+    driver = webdriver.Chrome(service=service)
 
     # List of WhatsApp numbers to send messages to
     #numbers = ['+573226130241', '+573156702559', '+573104983987']
